@@ -6,7 +6,7 @@
 /*   By: doallard <doallard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:11:21 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 22:48:38 by doallard         ###   ########.fr       */
+/*   Updated: 2026/10/22 14:46:38 by doallard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
     return (dest_len + src_len);
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main (void)
-{
-    char dest[20] = "Hi ";
-    char src[] = "42!";
+// int main (void)
+// {
+//     char dest[20] = "Hi ";
+//     char src[] = "42!";
 
-    printf("%zu\n", ft_strlcat(dest, src, sizeof(dest)));
-    return (0);
-}
+//     printf("%zu\n", ft_strlcat(dest, src, sizeof(dest)));
+//     return (0);
+// }

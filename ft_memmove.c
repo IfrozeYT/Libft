@@ -6,7 +6,7 @@
 /*   By: doallard <doallard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:11:20 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 22:37:06 by doallard         ###   ########.fr       */
+/*   Updated: 2026/10/22 17:41:08 by doallard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
     {
         d += n;
         s += n;
+        
         while (n--)
             *--d = *--s;
     }
