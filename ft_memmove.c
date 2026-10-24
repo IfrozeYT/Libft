@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: doallard <doallard@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/21 17:11:20 by username          #+#    #+#             */
-/*   Updated: 2026/10/22 17:41:08 by doallard         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memmove.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/21 17:11:20 by username         #+#    #+#              */
+/*   Updated: 2026/10/24 19:13:53 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char	*d;
-    const unsigned char	*s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-    d = dest;
-    s = src;
-    if (!dest && !src)
-        return (NULL);
-    if (d < s)
-    {
-        while (n--)
-            *d++ = *s++;
-    }
-    else
-    {
-        d += n;
-        s += n;
-        
-        while (n--)
-            *--d = *--s;
-    }
-    return (dest);
+	d = dest;
+	s = src;
+	if (!dest && !src)
+		return (NULL);
+	if (d < s)
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	else
+	{
+		d += n;
+		s += n;
+		while (n--)
+			*--d = *--s;
+	}
+	return (dest);
 }
 
 // #include <stdio.h>
@@ -42,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // int main(void)
 // {
 //     char str1[] = "Not quite my tempo";
-//     char str2[20]; 
+//     char str2[20];
 
 //     str2[0] = '\0'; // Initialize str2 to an empty string
 //     printf("String exemple: %s\n", str1);

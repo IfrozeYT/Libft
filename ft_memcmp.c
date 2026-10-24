@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: doallard <doallard@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/21 17:11:18 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 18:43:27 by doallard         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memcmp.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/21 17:11:18 by username         #+#    #+#              */
+/*   Updated: 2026/10/24 19:13:48 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*tmp_s1;
 	unsigned char	*tmp_s2;
-    unsigned int i;
+	unsigned int	i;
 
 	tmp_s1 = (unsigned char *) s1;
 	tmp_s2 = (unsigned char *) s2;
-    i = 0;
-
-    while(i < n)
-    {
-        if (tmp_s1[i] != tmp_s2[i])
-            return (tmp_s1[i] - tmp_s2[i]);
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i < n)
+	{
+		if (tmp_s1[i] != tmp_s2[i])
+			return (tmp_s1[i] - tmp_s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 // #include <stdio.h>
