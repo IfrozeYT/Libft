@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 17:11:26 by username         #+#    #+#              */
-/*   Updated: 2026/10/24 19:15:49 by username        ###   ########.fr        */
+/*   Updated: 2026/10/26 18:52:39 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_oc = NULL;
+	char	*tmp_s;
+	char	*last_oc;
+	char	to_find;
 
-	while (*s)
+	tmp_s = (char *) s;
+	to_find = (char) c;
+	last_oc = 0;
+	while (*tmp_s != '\0')
 	{
-		if (*s == c)
-			last_oc = s;
-		s++;
+		if (*tmp_s == to_find)
+			last_oc = tmp_s;
+		tmp_s++;
 	}
-	if (c == '\0')
-		return ((char *) s);
-	return ((char *) last_oc);
+	if (to_find == '\0' && *tmp_s == to_find)
+		return (tmp_s);
+	return (last_oc);
 }
 
 // #include <stdio.h>

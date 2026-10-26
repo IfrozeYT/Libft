@@ -6,18 +6,20 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 17:11:25 by username         #+#    #+#              */
-/*   Updated: 2026/10/24 19:14:16 by username        ###   ########.fr        */
+/*   Updated: 2026/10/26 18:41:40 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!little)
+	i = 0;
+	j = 0;
+	if (little[0] == '\0')
 		return ((char *) big);
 	while (big[i] != '\0' && i < len)
 	{

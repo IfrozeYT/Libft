@@ -6,18 +6,20 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 17:11:17 by username         #+#    #+#              */
-/*   Updated: 2026/10/24 19:13:46 by username        ###   ########.fr        */
+/*   Updated: 2026/10/26 19:31:13 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*a;
 	unsigned char	b;
 	size_t			i;
 
+	a = (unsigned char *) s;
+	b = (unsigned char) c;
 	i = 0;
 	while (i < n)
 	{

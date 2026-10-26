@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 17:11:11 by username         #+#    #+#              */
-/*   Updated: 2026/10/24 19:13:37 by username        ###   ########.fr        */
+/*   Updated: 2026/10/26 18:38:20 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	ft_isalnum(int c)
 
 // #include <stdio.h>
 
-// int main(void)
+// int	main(void)
 // {
-//     printf("%d\n", ft_isalnum('a'));
-//     printf("%d\n", ft_isalnum('5'));
-//     printf("%d\n", ft_isalnum('!'));
-//     return (0);
+// 	printf("%d\n", ft_isalnum('a'));
+// 	printf("%d\n", ft_isalnum('5'));
+// 	printf("%d\n", ft_isalnum('!'));
+// 	return (0);
 // }

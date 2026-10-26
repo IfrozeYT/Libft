@@ -6,7 +6,7 @@
 #    By: doallard <doallard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/21 17:11:24 by username          #+#    #+#              #
-#    Updated: 2026/10/26 18:15:29 by doallard         ###   ########.fr        #
+#    Updated: 2026/10/26 19:37:06 by doallard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,3 +36,5 @@ fclean: clean
 bonus: $(LIBS_ALL)
 	ar rcs $(NAME) $(LIBS_ALL)
 re: fclean all
+
+.PHONY: all clean fclean re
