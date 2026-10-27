@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: doallard <doallard@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/27 15:21:11 by username          #+#    #+#             */
-/*   Updated: 2026/10/27 16:49:09 by doallard         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_calloc.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/10/27 15:21:11 by username         #+#    #+#              */
+/*   Updated: 2026/10/27 18:31:40 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,22 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*a;
 
+	if (size && nmemb > (((size_t) - 1) / size))
+		return (NULL);
 	a = malloc(size * nmemb);
-	if (a == 0)
-		return (0);
+	if (!a)
+		return (NULL);
 	ft_bzero(a, nmemb * size);
 	return (a);
 }
 
 // #include <stdio.h>
-
+//
 // int	main(void)
 // {
 // 	size_t	nmemb = 5;
 // 	size_t	size = sizeof(int);
 // 	int		*arr = (int *) ft_calloc(nmemb, size);
-
 // 	if (arr == NULL)
 // 	{
 // 		printf("Memory allocation failed\n");
@@ -38,9 +39,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	}
 // 	for (size_t i = 0; i < nmemb; i++)
 // 	{
-// 		printf("%d ", arr[i]);
+// 		printf("arr[%zu] = %d\n", i, arr[i]);
 // 	}
-// 	printf("\n");
 // 	free(arr);
 // 	return (0);
 // }
